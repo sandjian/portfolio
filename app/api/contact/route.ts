@@ -18,7 +18,7 @@ export async function POST(request: Request) {
   }
 
   try {
-    const { name, email, company, message } = await request.json();
+    const { name, email, subject, message } = await request.json();
 
     if (!name || !email || !message) {
       return NextResponse.json({ message: 'Missing required fields' }, { status: 400 });
@@ -30,7 +30,7 @@ export async function POST(request: Request) {
       subject: `Nuevo mensaje de ${name} desde tu portfolio`,
       replyTo: email,
       
-      react: React.createElement(ContactFormEmail, { name, email, company, message }),
+      react: React.createElement(ContactFormEmail, { name, email, subject, message }),
     });
 
     return NextResponse.json(data);
