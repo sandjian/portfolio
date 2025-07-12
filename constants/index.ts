@@ -255,7 +255,7 @@ export const TechStackData = {
       id: "powershell",
       name: "PowerShell",
       description: "Empleo PowerShell para la automatización de tareas de desarrollo y administración de sistemas, optimizando flujos de trabajo y mejorando la eficiencia en entornos Windows.",
-      image: "/stack/PowerShell.svg",
+      image: "/stack/Powershell.svg",
     },
   ],
 };
