@@ -95,12 +95,12 @@ export default function Navbar() {
       </motion.div>
 
       {/* Mobile Menu */}
-      <div className="lg:hidden flex justify-between items-center px-8 pt-4 pb-2 border-b border-white/5 border-dashed">
+      <div className="lg:hidden flex justify-between items-center px-4 md:px-8 pt-4 pb-2 border-b border-white/5 border-dashed">
 
         <Link
           href="#home"
           onClick={(e) => handleNavLinkClick(e, '#home')}
-          className="flex items-center px-2"
+          className="flex items-center"
           aria-label="logo portfolio"
         >
           <Image alt="logo portfolio" src={"/logo/as-dev.png"} width={70} height={50} />

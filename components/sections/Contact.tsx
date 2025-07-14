@@ -129,13 +129,13 @@ export function Contact() {
     <section id="contact" className="relative py-10 border-y border-dashed border-white/5 text-foreground overflow-hidden">
       <motion.div
         ref={containerRef}
-        className="relative z-10 max-w-6xl mx-auto w-full"
+        className="relative z-10 max-w-6xl mx-auto w-full px-2 sm:px-8"
         variants={mainStaggerContainer}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.4 }}
       >
-        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-12 p-8">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Columna del Formulario de Contacto */}
           <motion.div
             className="space-y-8"

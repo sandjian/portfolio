@@ -34,7 +34,7 @@ export function Projects() {
     <section id="projects" className="w-full py-20 bg-background">
       <div className="w-full max-w-6xl mx-auto">
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-2 sm:px-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"

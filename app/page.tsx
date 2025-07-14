@@ -7,7 +7,7 @@ import { Contact } from "@/components/sections/Contact";
 
 export default function Home () {
     return (
-        <main className="w-full px-4 md:px-8">
+        <main className="w-full px-1 md:px-8">
             <div className="max-w-7xl w-full m-auto border-x border-dashed border-white/5">
                 <Hero/>
                 <AboutMe/>

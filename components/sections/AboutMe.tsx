@@ -105,7 +105,7 @@ export const AboutMe = ({ data = Aboutme }: AboutmeProps) => {
   return (
     <section id="about-me" className="relative w-full pt-10 pb-20 bg-background overflow-hidden border-y border-dashed border-white/5">
 
-      <div className="relative z-10 w-full max-w-6xl m-auto px-8">
+      <div className="relative z-10 w-full max-w-6xl m-auto px-2 sm:px-8">
         <motion.div
           className="grid gap-6 lg:grid-cols-4"
           variants={containerVariants}

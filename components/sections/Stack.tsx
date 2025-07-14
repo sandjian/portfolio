@@ -75,7 +75,7 @@ export function TechStack() {
   return (
     <section className="w-full py-20 bg-background text-foreground">
       <motion.div 
-        className="w-full max-w-6xl m-auto px-8"
+        className="w-full max-w-6xl m-auto px-2 sm:px-8"
         variants={mainContainerVariants}
         initial="hidden"
         whileInView="visible"

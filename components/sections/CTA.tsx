@@ -35,7 +35,7 @@ export function CTA({
 }: CTAProps) {
   const handleContactButtonClick = useSmoothScroll();
   return (
-    <section className="py-20 w-full bg-background px-8 border-y border-white/5 border-dashed">
+    <section className="py-20 w-full bg-background px-2 sm:px-8 border-y border-white/5 border-dashed">
       <div className="relative w-full mx-auto max-w-6xl rounded-3xl overflow-hidden">
         <BackgroundGradient className="w-full p-6">
           <motion.div 
@@ -51,7 +51,7 @@ export function CTA({
               <Link
                 onClick={(e) => handleContactButtonClick(e, buttonUrl)}
                 href={buttonUrl}
-                className="w-44 h-12 mt-6 rounded-xl bg-zinc-900/40 border border-white/10 text-foreground text-sm flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105"
+                className="w-full md:w-44 h-12 mt-6 rounded-xl bg-zinc-900/40 border border-white/10 text-foreground text-sm flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105"
               >
                 <Phone className="w-4 h-4" />
                 {buttonText}

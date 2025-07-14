@@ -56,11 +56,11 @@ export function Hero() {
     };
 
     return (
-        <section id="home" className="w-full pb-6 ">
-            <div className="relative bg-cover bg-center bg-[url('/backgrounds/bg-sm.webp')] lg:bg-[url('/backgrounds/1.webp')] -top-20 flex items-center ">
+        <section id="home" className="w-full pb-10 ">
+            <div className="relative bg-cover bg-center bg-[url('/backgrounds/bg-sm.webp')] lg:bg-[url('/backgrounds/1.webp')] md:-top-20 flex items-center ">
                 <div aria-hidden className="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-background z-0"></div>
                 <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background z-0"></div>
-                <div className="w-full mx-auto max-w-6xl z-10 mt-36 lg:mt-44 px-4 sm:px-8 ">
+                <div className="w-full mx-auto max-w-6xl z-10 mt-20 md:mt-44 px-2 sm:px-8">
                     <div className="flex">
                         <motion.div
                             className="relative max-w-lg text-left text-foreground py-4"
@@ -98,12 +98,12 @@ export function Hero() {
                             <FloatingDock variants={itemVariants} />
 
                             <motion.div
-                                className="w-full flex flex-row pt-6 gap-x-4 gap-y-4"
+                                className="w-full flex flex-col sm:flex-row pt-6 gap-x-4 gap-y-4"
                                 variants={itemVariants}
                             >
                                 <motion.button
                                     onClick={handleWhatsAppClick} 
-                                    className="w-44 h-12 rounded-xl bg-zinc-900/40 border border-white/10 hover:border-white text-foreground text-sm flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105"
+                                    className="w-full h-12 rounded-xl bg-zinc-900/40 border border-white/10 hover:border-white text-foreground text-sm flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105"
                                     whileHover={{ scale: 1.02 }} 
                                     whileTap={{ scale: 0.98 }}
                                 >
@@ -113,7 +113,7 @@ export function Hero() {
 
                                 <button
                                     onClick={handleDownloadCV}
-                                    className="w-44 h-12 rounded-xl bg-white text-zinc-900 text-sm flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105 hover:bg-primary/80 hover:text-foreground"
+                                    className="w-full h-12 rounded-xl bg-white text-zinc-900 text-sm flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105 hover:bg-primary/80 hover:text-foreground"
                                 >
                                     {button2.text}
                                     <ArrowDownToLine className="w-4 h-4" />
