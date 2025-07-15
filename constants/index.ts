@@ -46,11 +46,11 @@ export const Aboutme = {
 
   images: {
     mainImage: {
-      src: "/profile/2.jpg",
+      src: "/profile/01.jpg",
       alt: "Alejandro Sandjian profile",
     },
     secondaryImage: {
-      src: "/profile/1.jpg",
+      src: "/profile/02.jpg",
       alt: "Alejandro Sandjian profile #2",
     },
   },

@@ -1,10 +1,11 @@
+"use client";
 import { Button } from "@/components/ui/button"
-import { Github, Twitter } from "lucide-react" // Keep these if you still use them for social links
+import { Github, Linkedin} from "lucide-react" 
 import Link from "next/link"
-import Image from "next/image"; // Import Image component
+import Image from "next/image"; 
+import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
 
 interface FooterProps {
-  // brandName: string; // We will no longer need this prop if we're hardcoding the image
   socialLinks: Array<{
     icon: React.ReactNode
     href: string
@@ -21,27 +22,26 @@ interface FooterProps {
 }
 
 export function FooterModel({
-  // brandName, // Remove brandName from destructuring
   socialLinks,
   copyright,
   mainLinks,
 }: FooterProps) {
+  
+  const handleNavLinkClick = useSmoothScroll();
   return (
     <footer className="pb-6 pt-16 lg:pb-8 lg:pt-24 w-full max-w-7xl m-auto border-x border-dashed border-white/5 ">
       <div className="px-4 lg:px-8">
         <div className="flex items-center justify-between px-6">
           <Link
-            href="#home" // Changed to #home to match your navbar's logo link behavior
+            href="#home" 
             className="flex items-center"
-            aria-label="logo portfolio" // Good practice for accessibility
+            aria-label="logo portfolio" 
           >
-            {/* Replaced brandName text with Image component */}
             <Image 
                 alt="logo portfolio" 
                 src={"/logo/as-dev.png"} 
-                width={100} // Adjust width as needed for footer
-                height={80} // Adjust height as needed for footer
-                // className="invert" // Apply invert if you need it for the footer's background, like in the mobile menu
+                width={100} 
+                height={80} 
             />
           </Link>
           <ul className="flex list-none space-x-3">
@@ -53,7 +53,7 @@ export function FooterModel({
                   className="h-10 w-10 rounded-full duration-300 transition-all hover:-translate-y-2 bg-neutral-200 hover:bg-white"
                   asChild
                 >
-                  <a href={link.href} target="_blank" aria-label={link.label} rel="noopener noreferrer"> {/* Added rel for security */}
+                  <a href={link.href} target="_blank" aria-label={link.label} rel="noopener noreferrer">
                     {link.icon}
                   </a>
                 </Button>
@@ -67,6 +67,7 @@ export function FooterModel({
               {mainLinks.map((link, i) => (
                 <li key={i} className="my-1 mx-2 shrink-0">
                   <a
+                  onClick={(e) => handleNavLinkClick(e, link.href)}
                     href={link.href}
                     className="text-sm font-semibold text-neutral-300 hover:text-foreground transition-colors duration-300"
                   >
@@ -91,16 +92,15 @@ export function FooterModel({
 export default function Footer() {
   return (
     <FooterModel
-      // brandName="<as/>" // Remove this prop
       socialLinks={[
         {
-          icon: <Twitter className="h-5 w-5 " />,
-          href: "https://twitter.com",
-          label: "Twitter",
+          icon: <Linkedin className="h-5 w-5 " />,
+          href: "https://linkedin.com/in/sandjian-alejandro",
+          label: "Linkedin",
         },
         {
           icon: <Github className="h-5 w-5" />,
-          href: "https://github.com",
+          href: "https://github.com/sandjian",
           label: "GitHub",
         },
       ]}
