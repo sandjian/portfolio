@@ -133,7 +133,7 @@ export function Contact() {
         variants={mainStaggerContainer}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.4 }}
+        viewport={{ once: true, amount: 0.1 }}
       >
         <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Columna del Formulario de Contacto */}

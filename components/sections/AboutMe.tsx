@@ -111,7 +111,7 @@ export const AboutMe = ({ data = Aboutme }: AboutmeProps) => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.1 }}
         >
           <motion.div
             className="flex flex-col w-full h-full lg:col-span-2"
@@ -128,7 +128,7 @@ export const AboutMe = ({ data = Aboutme }: AboutmeProps) => {
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
+                viewport={{ once: true, amount: 0.1 }}
               >
                 {spotlightCards.map((card, index) => {
                   const IconComponent = firstSpotlightIcons[index] || Zap;
@@ -172,7 +172,7 @@ export const AboutMe = ({ data = Aboutme }: AboutmeProps) => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.1 }}
         >
           <BackgroundGradient className="w-full p-10 md:p-16">
 
@@ -194,7 +194,7 @@ export const AboutMe = ({ data = Aboutme }: AboutmeProps) => {
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.1 }}
             >
 
               {achievementsSection.achievements.map((item, idx) => (
@@ -224,7 +224,7 @@ export const AboutMe = ({ data = Aboutme }: AboutmeProps) => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.1 }}
         >
           <motion.div variants={itemVariants} className="w-full lg:col-span-2 flex justify-center items-center">
             <div className="h-full p-2 bg-zinc-900/60 rounded-3xl flex items-center justify-center">
@@ -254,7 +254,7 @@ export const AboutMe = ({ data = Aboutme }: AboutmeProps) => {
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
+                viewport={{ once: true, amount: 0.1 }}
               >
                 {secondSpotlightCards.map((card, index) => {
                   const IconComponent = secondSpotlightIcons[index] || Zap;
