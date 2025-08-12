@@ -73,13 +73,13 @@ const cardItemVariants: Variants = {
 export function TechStack() {
   const { title, description, technologies } = TechStackData;
   return (
-    <section className="w-full py-20 bg-background text-foreground">
+    <section className="w-full py-20 min-h-screen bg-background text-foreground">
       <motion.div 
         className="w-full max-w-6xl m-auto px-2 sm:px-8"
         variants={mainContainerVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }} 
+        viewport={{ once: true, amount: 0.1 }} 
       >
         <motion.div 
           className="mb-16 p-4"
