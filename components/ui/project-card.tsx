@@ -87,7 +87,6 @@ const contentVariants: Variants = {
   },
 };
 
-
 function ProjectCard({
   name,
   image,
@@ -133,9 +132,36 @@ function ProjectCard({
         <p className="text-sm text-foreground leading-relaxed">{description}</p>
       </div>
 
+      {/* VERSIÓN MOBILE: siempre visible debajo del texto, oculta en md+ */}
+      <div className="flex flex-col gap-2 p-4 md:hidden">
+        <div className="flex flex-wrap gap-2 pb-2 w-full">
+          {technologies.map((tech, index) => (
+            <span
+              key={index}
+              className="bg-primary/80 rounded-lg px-2 py-1 text-xs text-foreground font-medium"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+        <Link href={repository} target="_blank" rel="noopener noreferrer" className="w-full">
+          <Button className="w-full flex items-center justify-center gap-2 bg-transparent border border-white text-foreground">
+            Repositorio GitHub
+            <Github className="w-4 h-4" />
+          </Button>
+        </Link>
+        <Link href={href} target="_blank" rel="noopener noreferrer" className="w-full">
+          <Button className="w-full flex items-center justify-center gap-2 bg-white text-zinc-900">
+            Ver Proyecto
+            <ExternalLink className="w-4 h-4" />
+          </Button>
+        </Link>
+      </div>
+
+      {/* VERSIÓN DESKTOP: overlay con hover */}
       <motion.div
         variants={overlayVariants}
-        className="absolute inset-0 bg-zinc-900 hover:border hover:border-zinc-900 flex flex-col"
+        className="absolute inset-0 bg-zinc-900 hover:border hover:border-zinc-900 flex-col hidden md:flex"
       >
         <div className="p-8 space-y-3 h-full w-full flex flex-col">
           <motion.div variants={contentVariants} className="w-full h-full pb-2">
